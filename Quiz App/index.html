@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="main">
+        <div class="container" id="box">
+            <div class="questionbox">
+                <h2 id="question"> 1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, totam!</h2>
+            </div>
+            <div class="option_box">
+                <input class="option" type="radio" id="first"  name="option" value="a" required>
+                <label for="first">Testing 1</label>
+            </div>
+            <div class="option_box">
+                <input class="option" type="radio" id="second"  name="option" value="b" required>
+                <label for="second">Testing 2</label>
+            </div>
+            <div class="option_box">
+                <input class="option" type="radio" id="third"  name="option" value="c" required>
+                <label for="third">Testing 3</label>
+            </div>
+            <div class="option_box">
+                <input class="option" type="radio" id="fourth"  name="option" value="d" required>
+                <label for="fourth">Testing 4</label>
+            </div>
+            <button id="submit" onclick="submitQuiz()">Submit</button>
+        </div>
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
