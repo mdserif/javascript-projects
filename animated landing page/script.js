@@ -3,31 +3,60 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-// let a= document.querySelector(".elem1")
-// console.log(a)
-// let b=a.getAttribute("data-video")
-// console.log(b)
 
-
-page3animation=()=>{
-    let container=document.querySelector("#elem-container")
-    let fixed=document.querySelector("#fixed-image")
-
-    container.addEventListener("mouseover",function(){
-        fixed.style.display="block"
+function page4Animation() {
+    var elemC = document.querySelector("#elem-container")
+    var fixed = document.querySelector("#fixed-image")
+    elemC.addEventListener("mouseenter", function () {
+        fixed.style.display = "block"
     })
-    container.addEventListener("mouseleave",()=>{
-        fixed.style.display="none"
+    elemC.addEventListener("mouseleave", function () {
+        fixed.style.display = "none"
     })
 
-    let elems=document.querySelectorAll(".elem")
-    elems.forEach(element => {
-        element.addEventListener("mouseover",()=>{
-            let image=element.getAttribute("data-image")
-            fixed.style.backgroundImage=`url(${image})`
+    var elems = document.querySelectorAll(".elem")
+    elems.forEach(function (e) {
+        e.addEventListener("mouseenter", function () {
+            var image = e.getAttribute("data-image")
+            fixed.style.backgroundImage = `url(${image})`
         })
-    });
-
+    })
 }
 
-page3animation()
+function swiperAnimation() {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 100,
+    });
+}
+function menuAnimation() {
+
+    var menu = document.querySelector("nav h3")
+    var full = document.querySelector("#full-scr")
+    var navimg = document.querySelector("nav img")
+    var flag = 0
+    menu.addEventListener("click", function () {
+        if (flag == 0) {
+            full.style.top = 0
+            navimg.style.opacity = 0
+            flag = 1
+        } else {
+            full.style.top = "-100%"
+            navimg.style.opacity = 1
+            flag = 0
+        }
+    })
+}
+
+function loaderAnimation() {
+    var loader = document.querySelector("#loader")
+    setTimeout(function () {
+        loader.style.top = "-100%"
+    }, 4200)
+}
+
+swiperAnimation()
+page4Animation()
+menuAnimation()
+loaderAnimation()
