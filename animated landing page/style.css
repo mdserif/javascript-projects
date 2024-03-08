@@ -13,6 +13,12 @@ html,body{
     width: 100%;
 }
 
+#main{
+    /* background-color: black; */
+    position: relative;
+    z-index: 10;
+}
+
 #page1{
     min-height: 100vh;
     width: 100%;
@@ -174,7 +180,7 @@ nav{
 #page2{
     min-height: 100vh;
     width: 100%;
-    background-color: white;
+    background-color: #EFEAE3;
     padding: 8vw 0;
     position: relative;
 }
@@ -249,6 +255,7 @@ nav{
     width: 100%;
     border-radius: 15px;
 }
+
 #bottom-page2 p{
     font-weight: 400;
     font-size:1vw;
@@ -284,53 +291,71 @@ nav{
     }
 }
 
-#page3{
+#page3 {
     min-height: 100vh;
     width: 100%;
+    background-color: #EFEAE3;
     padding: 4vw 0;
-    
 }
-.elem{
+
+.elem {
     height: 150px;
     width: 100%;
-    /* background-color: orange; */
     position: relative;
-    border-bottom: 1px solid #585151a6;
+
+    border-bottom: 1px solid #38383864;
     overflow: hidden;
     display: flex;
     align-items: center;
     padding: 0 2vw;
 }
 
-.elem h2{
-    font-size: 4vw;
+.elem h2 {
+    font-size: 3vw;
     position: relative;
     z-index: 9;
 }
 
-.elem .overlay{
+.elem .overlay {
     height: 100%;
     width: 100%;
-    background-color: #FF9831;
+    background-color: orange;
     position: absolute;
     left: 0;
     top: -100%;
-    transition:all ease 0.25s;
+    transition: all ease 0.25s;
 }
 
-.elem:hover .overlay{
+.elem:hover .overlay {
     top: 0;
 }
 
-#fixed-image{
+
+
+#fixed-image {
     height: 30vw;
-    width: 25vw;
-    background-color: red;
-    border-radius: 10px;
-    position: absolute;
+    width: 24vw;
+    /* background-color: red; */
+    border-radius: 15px;
+    position: fixed;
     z-index: 99;
     left: 50%;
     top: 25%;
     display: none;
-
+    background-size: cover;
+    background-position: center;
 }
+
+#page4{
+    height: 60vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+}
+
+
